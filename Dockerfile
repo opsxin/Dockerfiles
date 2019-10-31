@@ -10,8 +10,8 @@ ENV ARIA2_DHT_PORT="12345"
 WORKDIR /aria2
 
 # 加速国内网络环境下载
-RUN sed -i -e "/security/s/^/#/" \
-   -e "s/deb.debian.org/mirrors.aliyun.com/g" /etc/apt/sources.list
+#RUN sed -i -e "/security/s/^/#/" \
+#   -e "s/deb.debian.org/mirrors.aliyun.com/g" /etc/apt/sources.list
 
 RUN apt update && apt install -y \
     nginx aria2 wget unzip \
