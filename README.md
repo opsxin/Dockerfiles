@@ -6,7 +6,7 @@
 docker run --name aria2-ariang -d -p 80:80 -p 6800:6800 -p 6881:6881 hins/aria2-ariang
 ```
 
-## Change RPC Password
+## Other ways
 
 ```bash
 docker run --name aria2-ariang -d \
@@ -14,6 +14,7 @@ docker run --name aria2-ariang -d \
     -p 6800:6800 \
     -p 6881:6881 \
     -e ARIA2_PASSWD="888888" \
+    -v ${your_local_path}:/var/www/html \
     hins/aria2-ariang
 ```
 
