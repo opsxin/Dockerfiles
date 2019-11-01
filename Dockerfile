@@ -4,8 +4,6 @@ LABEL Maintainer="hsin"
 
 ARG ARIANG_VARSION="1.1.4"
 ENV ARIA2_PASSWD="123456"
-ENV ARIA2_BT_PORT="12345"
-ENV ARIA2_DHT_PORT="12345"
 
 WORKDIR /aria2
 
@@ -24,7 +22,7 @@ RUN wget https://github.com/mayswind/AriaNg/releases/download/${ARIANG_VARSION:-
 COPY service.sh conf/* ./
 RUN mv nginx-default.conf /etc/nginx/sites-enabled/default 
 
-EXPOSE 80 6800 ${ARIA2_BT_PORT:-12345} ${ARIA2_DHT_PORT:-12345}
+EXPOSE 80 6800 6881
 
 CMD ["/bin/bash", "service.sh"]
 
