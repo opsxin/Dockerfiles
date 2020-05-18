@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:7
 LABEL Maintainer="hsin" Version="1.1" Password="123456" \
     Description="latest centos, install ssh and python" 
 
