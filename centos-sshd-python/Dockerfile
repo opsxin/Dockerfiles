@@ -6,7 +6,7 @@ RUN yum makecache && yum install -y \
     openssh-server python3 \
     && yum clean all
 
-RUN ln -s /usr/bin/python3 /usr/bin/python
+#RUN ln -s /usr/bin/python3 /usr/bin/python
 
 # 生成 HostKey
 RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_ed25519_key  -N '' \
